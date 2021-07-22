@@ -3,6 +3,7 @@ package proxypatten;
 import proxypatten.Proxy.AgencyCarStoreProxy;
 import proxypatten.Proxy.RunTimeAgencyCarStoreProxy;
 import proxypatten.Store.AgencyCarStore;
+import proxypatten.Store.AgencyStore;
 
 public class ProxySimulation {
     public static void main(String args[]) {
@@ -17,7 +18,7 @@ public class ProxySimulation {
     public void runTimeByCar(){
         AgencyCarStore agencyCarStore = new AgencyCarStore();
         RunTimeAgencyCarStoreProxy runTimeAgencyCarStoreProxy = new RunTimeAgencyCarStoreProxy(agencyCarStore);
-        AgencyCarStore carStore = (AgencyCarStore)runTimeAgencyCarStoreProxy.newProxy(agencyCarStore);
+        AgencyStore carStore = (AgencyStore)runTimeAgencyCarStoreProxy.newProxy(agencyCarStore);
         carStore.sell();
     }
 
