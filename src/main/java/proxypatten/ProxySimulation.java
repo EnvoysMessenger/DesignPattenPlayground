@@ -6,7 +6,7 @@ import proxypatten.Store.AgencyCarStore;
 import proxypatten.Store.AgencyStore;
 
 public class ProxySimulation {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         ProxySimulation proxySimulation = new ProxySimulation();
         proxySimulation.simulate();
     }
